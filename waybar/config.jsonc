@@ -3,7 +3,7 @@
 	"height": 30,
 	"margin": 10,
 	"modules-left": ["hyprland/workspaces"],
-	"modules-center": ["clock"],
+	"modules-center": ["clock", "custom/calculator"],
 	"modules-right": ["battery"],
 	"hyprland/workspaces": {
 		"format": "{icon}",
@@ -22,5 +22,9 @@
 			"critical": 10
 		},
 		"interval": 1
+	},
+	"custom/calculator": {
+		"format": "",
+		"on-click": "qalculate-gtk"
 	}
 }
