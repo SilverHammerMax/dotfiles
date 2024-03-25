@@ -1,0 +1,47 @@
+@import "frappe.css";
+
+* {
+	color: @text;
+}
+
+#waybar {
+	background: transparent;
+	border-radius: 10px;
+}
+
+.modules-left {
+	background: @base;
+	border-radius: 10px;
+}
+
+#workspaces button:hover {
+	border-radius: 10px;
+}
+
+.modules-center {
+	background: @base;
+	margin: 0 5px;
+	padding: 0 10px;
+	border-radius: 10px;
+}
+
+#battery {
+	padding: 0 10px;
+	background: @base;
+	border-radius: 10px;
+}
+
+#battery.charging {
+	background: @green;
+	color: @base;
+}
+
+#battery.warning {
+	background: @peach;
+	color: @base;
+}
+
+#battery.critical {
+	background: @red;
+	color: @base;
+}
