@@ -2,7 +2,6 @@
 
 * {
 	color: @text;
-	margin: 0 5px;
 }
 
 #waybar {
@@ -44,4 +43,12 @@
 #battery.critical {
 	background: @red;
 	color: @base;
+}
+
+#clock {
+	margin: 0 5px;
+}
+
+#calculator {
+	margin: 0 5px;
 }
