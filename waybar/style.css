@@ -46,10 +46,12 @@
 	color: @base;
 }
 
-#clock {
+.modules-center * {
 	margin: 0 5px;
 }
 
+#clock {
+}
+
 #calculator {
-	margin: 0 5px;
 }
