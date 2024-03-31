@@ -36,12 +36,12 @@
 	color: @base;
 }
 
-#battery.warning {
+#battery.warning:not(.charging) {
 	background: @peach;
 	color: @base;
 }
 
-#battery.critical {
+#battery.critical:not(.charging) {
 	background: @red;
 	color: @base;
 }
