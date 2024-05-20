@@ -19,4 +19,6 @@ require("catppuccin").setup({
 	flavour = "frappe"
 });
 
+vim.cmd.colorscheme "catppuccin"
+
 require("usr.options");
