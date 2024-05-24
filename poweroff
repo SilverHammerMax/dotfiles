@@ -1,0 +1,3 @@
+#!/bin/sh
+WAYLAND_SOCKET=$WAYLAND_SOCKET
+exec $(echo "poweroff|reboot" | rofi -sep '|' -dmenu -l 2 -no-custom)
