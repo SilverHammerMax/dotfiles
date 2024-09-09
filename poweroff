@@ -1,3 +1,21 @@
 #!/bin/sh
 WAYLAND_SOCKET=$WAYLAND_SOCKET
-exec $(echo "poweroff|reboot" | rofi -sep '|' -dmenu -l 2 -no-custom)
+ACTION=$(echo "Poweroff|Reboot|Suspend|Logout|Reboot to Windows" | rofi -sep '|' -dmenu -l 5 -no-custom -i)
+echo $ACTION
+case $ACTION in
+    "Poweroff")
+        systemctl poweroff
+        ;;
+    "Reboot")
+        systemctl reboot
+        ;;
+    "Suspend")
+        systemctl suspend
+        ;;
+    "Logout")
+        hyprctl dispatch exit
+        ;;
+    "Reboot to Windows")
+        pkexec --user root efibootmgr --bootnext 0000 && systemctl reboot
+        ;;
+esac
