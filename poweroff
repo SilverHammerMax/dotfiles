@@ -10,7 +10,7 @@ case $ACTION in
         systemctl reboot
         ;;
     "Suspend")
-        systemctl suspend
+        hyprlock | systemctl suspend
         ;;
     "Hibernate")
         hyprlock | systemctl hibernate
