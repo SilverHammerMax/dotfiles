@@ -1,24 +1,27 @@
 #!/bin/sh
 WAYLAND_SOCKET=$WAYLAND_SOCKET
-ACTION=$(echo "Poweroff|Reboot|Suspend|Hibernate|Logout|Reboot to Windows" | rofi -sep '|' -dmenu -l 6 -no-custom -i)
+ACTION=$(echo "Poweroff|Reboot|Suspend|Hibernate|Lock|Reset|Reboot to Windows" | rofi -sep '|' -dmenu -l 7 -no-custom -i)
 echo $ACTION
 case $ACTION in
     "Poweroff")
-        systemctl poweroff
+        loginctl poweroff
         ;;
     "Reboot")
-        systemctl reboot
+        loginctl reboot
         ;;
     "Suspend")
-        hyprlock | systemctl suspend
+        hyprlock | loginctl suspend
         ;;
     "Hibernate")
-        hyprlock | systemctl hibernate
+        loginctl hibernate
         ;;
-    "Logout")
+    "Lock")
+        hyprlock
+        ;;
+    "Reset")
         hyprctl dispatch exit
         ;;
     "Reboot to Windows")
-        pkexec --user root efibootmgr --bootnext 0004 && systemctl reboot
+        pkexec --user root efibootmgr --bootnext 0004 && loginctl reboot
         ;;
 esac

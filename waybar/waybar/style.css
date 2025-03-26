@@ -1,0 +1,63 @@
+@import "frappe.css";
+
+* {
+	color: @text;
+}
+
+#waybar {
+	background: transparent;
+	border-radius: 10px;
+	font-family: "JetBrains Mono";
+}
+
+.modules-left {
+	background: @base;
+	border-radius: 10px;
+    border-style: solid;
+}
+
+#workspaces button:hover {
+	border-radius: 10px;
+}
+
+.modules-center {
+	background: @base;
+	padding: 0 10px;
+	border-radius: 10px;
+}
+
+.modules-right {
+    background: @base;
+    border-radius: 10px;
+}
+
+#battery {
+	background: @base;
+    padding: 0 5px;
+	border-radius: 10px;
+}
+
+#tray {
+    background: @base;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+#battery.charging {
+	background: @green;
+	color: @base;
+}
+
+#battery.warning:not(.charging) {
+	background: @peach;
+	color: @base;
+}
+
+#battery.critical:not(.charging) {
+	background: @red;
+	color: @base;
+}
+
+.modules-center * {
+	margin: 0 5px;
+}

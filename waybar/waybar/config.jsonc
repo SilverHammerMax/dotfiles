@@ -1,0 +1,30 @@
+{
+	"layer": "top",
+	"height": 30,
+	"margin": 10,
+	"modules-left": ["hyprland/workspaces"],
+	"modules-center": ["clock", "wireplumber"],
+	"modules-right": ["tray", "battery"],
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": ""
+		}
+	},
+	"clock": {
+		"format": "{:%a %D\t%I:%M:%S %p}",
+		"interval": 1
+	},
+	"battery": {
+		"states": {
+			"warning": 20,
+			"critical": 10
+		},
+		"interval": 1
+	},
+    "wireplumber": {
+        "format": "󰕾",
+        "format-muted": "󰝟"
+    }
+}

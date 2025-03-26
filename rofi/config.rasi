@@ -1,0 +1,36 @@
+@import "catppuccin-frappe"
+
+configuration {
+    font: "JetBrains Mono 12";
+}
+
+window {
+    background-color: @base;
+    border-radius: 10;
+    border: 5;
+    border-color: @crust;
+}
+
+entry {
+    text-color: @text;
+    placeholder-color: @overlay0;
+}
+
+prompt {
+    text-color: @text;
+}
+
+element normal.normal {
+    background-color: @base;
+    text-color: @text;
+}
+
+element alternate.normal {
+    background-color: @mantle;
+    text-color: @text;
+}
+
+element selected.normal {
+    background-color: @flamingo;
+    text-color: @base;
+}
